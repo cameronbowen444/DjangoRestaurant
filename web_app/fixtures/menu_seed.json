@@ -1,0 +1,976 @@
+[
+{
+  "model": "web_app.user",
+  "pk": 1,
+  "fields": {
+    "first_name": "Cameron",
+    "last_name": "Bowen",
+    "email": "cameron@gmail.com",
+    "phone": null,
+    "rewards": 0,
+    "password": "$2b$12$SoDzuT7u3f0icvx18taAvesmYsCwGOEhPXYbC.GtyH9reaZQCMrL2",
+    "created_at": "2026-05-26T19:36:23.865Z",
+    "updated_at": "2026-05-26T19:36:23.865Z"
+  }
+},
+{
+  "model": "web_app.customer",
+  "pk": 1,
+  "fields": {
+    "first_name": "sadfakljh",
+    "last_name": "ADSFKGJH",
+    "email": "cameron@gmail.com",
+    "phone": "8182927543",
+    "created_at": "2026-05-26T19:35:10.609Z",
+    "updated_at": "2026-05-26T19:35:10.610Z"
+  }
+},
+{
+  "model": "web_app.customer",
+  "pk": 2,
+  "fields": {
+    "first_name": "Cameron",
+    "last_name": "Bowen",
+    "email": "cameron@gmail.com",
+    "phone": "818-282-9678",
+    "created_at": "2026-06-23T21:42:01.165Z",
+    "updated_at": "2026-06-23T21:42:01.165Z"
+  }
+},
+{
+  "model": "web_app.customer",
+  "pk": 3,
+  "fields": {
+    "first_name": "Cameron",
+    "last_name": "Bowen",
+    "email": "cameron@gmail.com",
+    "phone": "890-789-7990",
+    "created_at": "2026-06-23T21:44:09.791Z",
+    "updated_at": "2026-06-23T21:44:09.791Z"
+  }
+},
+{
+  "model": "web_app.customer",
+  "pk": 4,
+  "fields": {
+    "first_name": "Cameron",
+    "last_name": "Bowen",
+    "email": "cameron@gmail.com",
+    "phone": "897-654-3576",
+    "created_at": "2026-06-23T21:46:01.053Z",
+    "updated_at": "2026-06-23T21:46:01.053Z"
+  }
+},
+{
+  "model": "web_app.customer",
+  "pk": 5,
+  "fields": {
+    "first_name": "Cameron",
+    "last_name": "Boqwen",
+    "email": "cameorn@gmail.com",
+    "phone": "876-956-7687",
+    "created_at": "2026-06-23T22:06:36.309Z",
+    "updated_at": "2026-06-23T22:06:36.309Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 1,
+  "fields": {
+    "name": "Appetizers",
+    "created_at": "2022-10-26T18:13:27.822Z",
+    "updated_at": "2022-10-26T18:13:27.822Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 2,
+  "fields": {
+    "name": "Pizza",
+    "created_at": "2022-10-26T18:13:32.493Z",
+    "updated_at": "2022-10-26T18:13:32.493Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 3,
+  "fields": {
+    "name": "Pasta",
+    "created_at": "2022-10-26T18:13:49.025Z",
+    "updated_at": "2022-10-26T18:13:49.025Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 4,
+  "fields": {
+    "name": "Desserts",
+    "created_at": "2022-10-26T18:13:49.210Z",
+    "updated_at": "2022-10-26T18:13:49.210Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 5,
+  "fields": {
+    "name": "Drinks",
+    "created_at": "2022-10-26T18:14:03.883Z",
+    "updated_at": "2022-10-26T18:14:03.883Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 6,
+  "fields": {
+    "name": "Appetizers USERS",
+    "created_at": "2022-10-26T18:48:09.136Z",
+    "updated_at": "2022-10-26T18:48:09.136Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 7,
+  "fields": {
+    "name": "Pizza USERS",
+    "created_at": "2022-10-26T18:48:09.141Z",
+    "updated_at": "2022-10-26T18:48:09.141Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 8,
+  "fields": {
+    "name": "Pasta USERS",
+    "created_at": "2022-10-26T18:48:09.146Z",
+    "updated_at": "2022-10-26T18:48:09.146Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 9,
+  "fields": {
+    "name": "Desserts USERS",
+    "created_at": "2022-10-26T18:48:09.151Z",
+    "updated_at": "2022-10-26T18:48:09.151Z"
+  }
+},
+{
+  "model": "web_app.category",
+  "pk": 10,
+  "fields": {
+    "name": "Drinks USERS",
+    "created_at": "2022-10-26T18:48:11.673Z",
+    "updated_at": "2022-10-26T18:48:11.673Z"
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 1,
+  "fields": {
+    "food_name": "Bread Sticks",
+    "desc": "Crispy-on-the-outside, soft-on-the-inside, and seasoned with garlic and parmesan, they're perfect with pizza or pasta. Comes with a cup of our delicious marinara! 137 cal/stick",
+    "price": "13.98",
+    "category": 1,
+    "created_at": "2022-10-26T18:25:04.369Z",
+    "updated_at": "2022-10-26T18:25:04.369Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 2,
+  "fields": {
+    "food_name": "Cheese Bread",
+    "desc": "A side everyone can agree on! Get these cheese sticks sprinkled with flavorful Italian seasoning and a cup of our delicious marinara. 150 cal/stick",
+    "price": "15.98",
+    "category": 1,
+    "created_at": "2022-10-26T18:43:45.214Z",
+    "updated_at": "2022-10-26T18:43:45.214Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 3,
+  "fields": {
+    "food_name": "Fries",
+    "desc": "Add some crispy fries with or without our delicious seasoning. There’s no better wingman. 497 cal/Order",
+    "price": "2.99",
+    "category": 1,
+    "created_at": "2022-10-26T18:43:45.265Z",
+    "updated_at": "2022-10-26T18:43:45.265Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 4,
+  "fields": {
+    "food_name": "Bone-In Wings",
+    "desc": "Eating these classic, crispy bone-in wings is the easy part. 107 cal/Wing, 6 Wings",
+    "price": "11.99",
+    "category": 1,
+    "created_at": "2022-10-26T18:43:45.271Z",
+    "updated_at": "2022-10-26T18:43:45.271Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 5,
+  "fields": {
+    "food_name": "Boneless Wings",
+    "desc": "All the wings. None of the work. Get these tasty, 100% all-white meat boneless wings tossed in your favorite sauce. 100 cal/Wing, 8 Wings",
+    "price": "8.69",
+    "category": 1,
+    "created_at": "2022-10-26T18:43:46.619Z",
+    "updated_at": "2022-10-26T18:43:46.619Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 6,
+  "fields": {
+    "food_name": "Cheese Pizza",
+    "desc": "Your favorite cheese pizza, with your choice of crust covered in classic marinara sauce and topped with gooey mozzarella cheese. It's anything but 'plain.'",
+    "price": "15.49",
+    "category": 2,
+    "created_at": "2022-10-26T18:44:03.807Z",
+    "updated_at": "2022-10-26T18:44:03.807Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 7,
+  "fields": {
+    "food_name": "Pepporoni Pizza",
+    "desc": "You literally can't go wrong with pepperoni and mozzarella cheese. Classic for a reason.",
+    "price": "18.24",
+    "category": 2,
+    "created_at": "2022-10-26T18:44:03.828Z",
+    "updated_at": "2022-10-26T18:44:03.828Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 8,
+  "fields": {
+    "food_name": "Subreme Pizza",
+    "desc": "Classic marinara sauce, authentic old-world pepperoni, seasoned pork, beef, fresh mushrooms, fresh green bell peppers and fresh red onions.",
+    "price": "20.49",
+    "category": 2,
+    "created_at": "2022-10-26T18:44:03.854Z",
+    "updated_at": "2022-10-26T18:44:03.854Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 9,
+  "fields": {
+    "food_name": "Veggie Pizza",
+    "desc": "A garden's worth of vegetables. Fresh white mushrooms, onions, crisp green peppers, diced tomatoes and black olives.",
+    "price": "20.49",
+    "category": 2,
+    "created_at": "2022-10-26T18:44:03.876Z",
+    "updated_at": "2022-10-26T18:44:03.876Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 10,
+  "fields": {
+    "food_name": "Meat Lovers Pizza",
+    "desc": "Classic marinara sauce, authentic old-world pepperoni, all-natural Italian sausage, slow-roasted ham, applewood smoked bacon, seasoned pork and beef.",
+    "price": "20.49",
+    "category": 2,
+    "created_at": "2022-10-26T18:44:03.906Z",
+    "updated_at": "2022-10-26T18:44:03.906Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 11,
+  "fields": {
+    "food_name": "BBQ Chicken Pizza",
+    "desc": "Barbeque sauce, grilled chicken, applewood smoked bacon and fresh red onions. Best on our Hand Tossed crust.",
+    "price": "20.49",
+    "category": 2,
+    "created_at": "2022-10-26T18:44:03.926Z",
+    "updated_at": "2022-10-26T18:44:03.927Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 12,
+  "fields": {
+    "food_name": "Buffalo Chicken Pizza",
+    "desc": "Buffalo sauce, grilled chicken, sliced banana peppers and fresh red onions. Best on our Hand Tossed crust.",
+    "price": "20.49",
+    "category": 2,
+    "created_at": "2022-10-26T18:44:03.953Z",
+    "updated_at": "2022-10-26T18:44:03.953Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 13,
+  "fields": {
+    "food_name": "Hawaiian Chicken Pizza",
+    "desc": "Classic marinara sauce topped with grilled chicken, slow-roasted ham, sweet pineapple and fresh green bell peppers. Best on our Thin 'N Crispy® crust.",
+    "price": "20.49",
+    "category": 2,
+    "created_at": "2022-10-26T18:44:05.083Z",
+    "updated_at": "2022-10-26T18:44:05.083Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 14,
+  "fields": {
+    "food_name": "Oven-Baked Chicken Alfredo Pasta",
+    "desc": "You can't go wrong with this classic combination of our new creamy Alfredo sauce, grilled chicken, cheese, shredded Parmesan, and Parmesan-oregano seasoning. Includes 5 breadsticks.",
+    "price": "8.99",
+    "category": 3,
+    "created_at": "2022-10-26T18:44:23.333Z",
+    "updated_at": "2022-10-26T18:44:23.333Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 15,
+  "fields": {
+    "food_name": "Oven-Baked Italian Meats Pasta",
+    "desc": "Fill up on this savory new recipe that's packed with sweet tomato sauce, pepperoni, Italian sausage, cheese, shredded Parmesan, and Parmesan-oregano seasoning. Includes 5 breadsticks.",
+    "price": "8.99",
+    "category": 3,
+    "created_at": "2022-10-26T18:44:23.364Z",
+    "updated_at": "2022-10-26T18:44:23.364Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 16,
+  "fields": {
+    "food_name": "Oven-Baked Cheesy Alfredo Pasta",
+    "desc": "A cheese lover’s dream featuring our new creamy Alfredo sauce and 2 layers of cheese, including parmesan on top.",
+    "price": "8.99",
+    "category": 3,
+    "created_at": "2022-10-26T18:44:23.385Z",
+    "updated_at": "2022-10-26T18:44:23.385Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 17,
+  "fields": {
+    "food_name": "Oven-Baked Veggie Pasta",
+    "desc": "A flavorful combo of sweet tomato sauce, green peppers, onions, tomatoes, black olives, cheese, shredded Parmesan and Parmesan-oregano seasoning. Includes 5 breadsticks.",
+    "price": "8.99",
+    "category": 3,
+    "created_at": "2022-10-26T18:44:25.267Z",
+    "updated_at": "2022-10-26T18:44:25.267Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 18,
+  "fields": {
+    "food_name": "Cinnabon® Mini Rolls",
+    "desc": "10 mini cinnamon rolls, topped with signature cream cheese frosting, are the perfect way to end pizza night. Or you can eat 'em first. Don't worry, we won't tell",
+    "price": "7.19",
+    "category": 4,
+    "created_at": "2022-10-26T18:44:45.205Z",
+    "updated_at": "2022-10-26T18:44:45.205Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 19,
+  "fields": {
+    "food_name": "Chocolate Chip Cookie",
+    "desc": "Pizza night just got a whole lot sweeter. Freshly baked and warm from the oven, our cookie is packed with semi-sweet chocolate chips that melt in your mouth.",
+    "price": "7.19",
+    "category": 4,
+    "created_at": "2022-10-26T18:44:45.231Z",
+    "updated_at": "2022-10-26T18:44:45.231Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 20,
+  "fields": {
+    "food_name": "Triple Chocolate Brownie",
+    "desc": "Chocolate, chocolate, and more chocolate. Dig into this rich, decadent brownie made with semi-sweet chocolate chips, dark chocolate chips and cocoa. Did we mention there’s chocolate?",
+    "price": "7.19",
+    "category": 4,
+    "created_at": "2022-10-26T18:44:45.263Z",
+    "updated_at": "2022-10-26T18:44:45.264Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 21,
+  "fields": {
+    "food_name": "Cinnamon Sticks",
+    "desc": "Our freshly-baked cinnamon sticks are a sweet finale to pizza night. Don't forget the icing dip for added deliciousness!",
+    "price": "7.19",
+    "category": 4,
+    "created_at": "2022-10-26T18:44:45.291Z",
+    "updated_at": "2022-10-26T18:44:45.291Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 22,
+  "fields": {
+    "food_name": "Cream Cheese Frosting Dip",
+    "desc": "Add more signature cream cheese frosting to your order of Cinnabon® Mini Rolls. Can't say we blame you.",
+    "price": "0.99",
+    "category": 4,
+    "created_at": "2022-10-26T18:44:45.311Z",
+    "updated_at": "2022-10-26T18:44:45.311Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 23,
+  "fields": {
+    "food_name": "Icing Dip",
+    "desc": "Sinfully sweet dip! We'd tell you it's just for desserts, but we don't want to cramp your creativity.",
+    "price": "0.99",
+    "category": 4,
+    "created_at": "2022-10-26T18:44:46.979Z",
+    "updated_at": "2022-10-26T18:44:46.979Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 24,
+  "fields": {
+    "food_name": "Pepsi",
+    "desc": "The bold, refreshing, robust cola. All that's missing are the classic Pizza Hut cups.",
+    "price": "2.19",
+    "category": 5,
+    "created_at": "2022-10-26T18:44:59.403Z",
+    "updated_at": "2022-10-26T18:44:59.403Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 25,
+  "fields": {
+    "food_name": "Diet Pepse",
+    "desc": "Light. Crisp. Refreshing. With zero sugar, zero calories, and zero carbs. You know what that means? More pizza.",
+    "price": "2.19",
+    "category": 5,
+    "created_at": "2022-10-26T18:44:59.426Z",
+    "updated_at": "2022-10-26T18:44:59.426Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 26,
+  "fields": {
+    "food_name": "Pepsi Wild Cherry",
+    "desc": "The thrilling burst of unique cherry flavor and a sweet, crisp taste that gives you more to go wild for!",
+    "price": "2.19",
+    "category": 5,
+    "created_at": "2022-10-26T18:44:59.451Z",
+    "updated_at": "2022-10-26T18:44:59.451Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 27,
+  "fields": {
+    "food_name": "Sprite",
+    "desc": "A crisp, refreshing & caffeine free Lemon-Lime flavor soda with real sugar and a splash of real juice.",
+    "price": "2.19",
+    "category": 5,
+    "created_at": "2022-10-26T18:44:59.472Z",
+    "updated_at": "2022-10-26T18:44:59.472Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 28,
+  "fields": {
+    "food_name": "Sierra Mist",
+    "desc": "A crisp, refreshing & caffeine free Lemon-Lime flavor soda with real sugar and a splash of real juice.",
+    "price": "2.19",
+    "category": 5,
+    "created_at": "2022-10-26T18:44:59.494Z",
+    "updated_at": "2022-10-26T18:44:59.494Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 29,
+  "fields": {
+    "food_name": "Coke",
+    "desc": "The bold, refreshing, robust cola. All that's missing are the classic Pizza Hut cups.",
+    "price": "2.19",
+    "category": 5,
+    "created_at": "2022-10-26T18:44:59.511Z",
+    "updated_at": "2022-10-26T18:44:59.511Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.item",
+  "pk": 30,
+  "fields": {
+    "food_name": "Orange Crush",
+    "desc": "Crush Orange sends your taste buds into flavor overdrive with refreshingly juicy orange flavor that is 100% caffeine free.",
+    "price": "2.19",
+    "category": 5,
+    "created_at": "2022-10-26T18:45:00.819Z",
+    "updated_at": "2022-10-26T18:45:00.819Z",
+    "customer": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 1,
+  "fields": {
+    "food_name": "Bread Sticks",
+    "desc": "Crispy-on-the-outside, soft-on-the-inside, and seasoned with garlic and parmesan, they're perfect with pizza or pasta. Comes with a cup of our delicious marinara! 137 cal/stick",
+    "price": "11.88",
+    "points": 10,
+    "category": 6,
+    "created_at": "2022-10-26T19:11:43.743Z",
+    "updated_at": "2022-10-26T19:11:43.743Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 2,
+  "fields": {
+    "food_name": "Cheese Bread",
+    "desc": "A side everyone can agree on! Get these cheese sticks sprinkled with flavorful Italian seasoning and a cup of our delicious marinara. 150 cal/stick",
+    "price": "13.58",
+    "points": 10,
+    "category": 6,
+    "created_at": "2022-10-26T19:11:43.774Z",
+    "updated_at": "2022-10-26T19:11:43.774Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 3,
+  "fields": {
+    "food_name": "Fries",
+    "desc": "Add some crispy fries with or without our delicious seasoning. There’s no better wingman. 497 cal/Order",
+    "price": "2.54",
+    "points": 10,
+    "category": 6,
+    "created_at": "2022-10-26T19:11:43.796Z",
+    "updated_at": "2022-10-26T19:11:43.796Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 4,
+  "fields": {
+    "food_name": "Bone-In Wings",
+    "desc": "Eating these classic, crispy bone-in wings is the easy part. 107 cal/Wing, 6 Wings",
+    "price": "10.19",
+    "points": 10,
+    "category": 6,
+    "created_at": "2022-10-26T19:11:43.817Z",
+    "updated_at": "2022-10-26T19:11:43.817Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 5,
+  "fields": {
+    "food_name": "Boneless Wings",
+    "desc": "All the wings. None of the work. Get these tasty, 100% all-white meat boneless wings tossed in your favorite sauce. 100 cal/Wing, 8 Wings",
+    "price": "7.39",
+    "points": 10,
+    "category": 6,
+    "created_at": "2022-10-26T19:11:45.255Z",
+    "updated_at": "2022-10-26T19:11:45.255Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 6,
+  "fields": {
+    "food_name": "Cheese Pizza",
+    "desc": "Your favorite cheese pizza, with your choice of crust covered in classic marinara sauce and topped with gooey mozzarella cheese. It's anything but 'plain.'",
+    "price": "13.16",
+    "points": 30,
+    "category": 7,
+    "created_at": "2022-10-26T19:11:57.008Z",
+    "updated_at": "2022-10-26T19:11:57.008Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 7,
+  "fields": {
+    "food_name": "Pepporoni Pizza",
+    "desc": "You literally can't go wrong with pepperoni and mozzarella cheese. Classic for a reason.",
+    "price": "15.50",
+    "points": 30,
+    "category": 7,
+    "created_at": "2022-10-26T19:11:57.029Z",
+    "updated_at": "2022-10-26T19:11:57.029Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 8,
+  "fields": {
+    "food_name": "Subreme Pizza",
+    "desc": "Classic marinara sauce, authentic old-world pepperoni, seasoned pork, beef, fresh mushrooms, fresh green bell peppers and fresh red onions.",
+    "price": "17.42",
+    "points": 30,
+    "category": 7,
+    "created_at": "2022-10-26T19:11:57.054Z",
+    "updated_at": "2022-10-26T19:11:57.054Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 9,
+  "fields": {
+    "food_name": "Veggie Pizza",
+    "desc": "A garden's worth of vegetables. Fresh white mushrooms, onions, crisp green peppers, diced tomatoes and black olives.",
+    "price": "17.42",
+    "points": 30,
+    "category": 7,
+    "created_at": "2022-10-26T19:11:57.079Z",
+    "updated_at": "2022-10-26T19:11:57.079Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 10,
+  "fields": {
+    "food_name": "Meat Lovers Pizza",
+    "desc": "Classic marinara sauce, authentic old-world pepperoni, all-natural Italian sausage, slow-roasted ham, applewood smoked bacon, seasoned pork and beef.",
+    "price": "17.42",
+    "points": 30,
+    "category": 7,
+    "created_at": "2022-10-26T19:11:57.110Z",
+    "updated_at": "2022-10-26T19:11:57.110Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 11,
+  "fields": {
+    "food_name": "BBQ Chicken Pizza",
+    "desc": "Barbeque sauce, grilled chicken, applewood smoked bacon and fresh red onions. Best on our Hand Tossed crust.",
+    "price": "17.42",
+    "points": 30,
+    "category": 7,
+    "created_at": "2022-10-26T19:11:57.131Z",
+    "updated_at": "2022-10-26T19:11:57.131Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 12,
+  "fields": {
+    "food_name": "Buffalo Chicken Pizza",
+    "desc": "Buffalo sauce, grilled chicken, sliced banana peppers and fresh red onions. Best on our Hand Tossed crust.",
+    "price": "17.42",
+    "points": 30,
+    "category": 7,
+    "created_at": "2022-10-26T19:11:57.157Z",
+    "updated_at": "2022-10-26T19:11:57.157Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 13,
+  "fields": {
+    "food_name": "Hawaiian Chicken Pizza",
+    "desc": "Classic marinara sauce topped with grilled chicken, slow-roasted ham, sweet pineapple and fresh green bell peppers. Best on our Thin 'N Crispy® crust.",
+    "price": "17.42",
+    "points": 30,
+    "category": 7,
+    "created_at": "2022-10-26T19:12:00.991Z",
+    "updated_at": "2022-10-26T19:12:00.991Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 14,
+  "fields": {
+    "food_name": "Oven-Baked Chicken Alfredo Pasta",
+    "desc": "You can't go wrong with this classic combination of our new creamy Alfredo sauce, grilled chicken, cheese, shredded Parmesan, and Parmesan-oregano seasoning. Includes 5 breadsticks.",
+    "price": "7.64",
+    "points": 20,
+    "category": 8,
+    "created_at": "2022-10-26T19:12:32.664Z",
+    "updated_at": "2022-10-26T19:12:32.664Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 15,
+  "fields": {
+    "food_name": "Oven-Baked Italian Meats Pasta",
+    "desc": "Fill up on this savory new recipe that's packed with sweet tomato sauce, pepperoni, Italian sausage, cheese, shredded Parmesan, and Parmesan-oregano seasoning. Includes 5 breadsticks.",
+    "price": "7.64",
+    "points": 20,
+    "category": 8,
+    "created_at": "2022-10-26T19:12:32.695Z",
+    "updated_at": "2022-10-26T19:12:32.695Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 16,
+  "fields": {
+    "food_name": "Oven-Baked Cheesy Alfredo Pasta",
+    "desc": "A cheese lover’s dream featuring our new creamy Alfredo sauce and 2 layers of cheese, including parmesan on top.",
+    "price": "7.64",
+    "points": 20,
+    "category": 8,
+    "created_at": "2022-10-26T19:12:32.722Z",
+    "updated_at": "2022-10-26T19:12:32.722Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 17,
+  "fields": {
+    "food_name": "Oven-Baked Veggie Pasta",
+    "desc": "A flavorful combo of sweet tomato sauce, green peppers, onions, tomatoes, black olives, cheese, shredded Parmesan and Parmesan-oregano seasoning. Includes 5 breadsticks.",
+    "price": "7.64",
+    "points": 20,
+    "category": 8,
+    "created_at": "2022-10-26T19:12:32.786Z",
+    "updated_at": "2022-10-26T19:12:32.786Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 18,
+  "fields": {
+    "food_name": "Cinnabon® Mini Rolls",
+    "desc": "10 mini cinnamon rolls, topped with signature cream cheese frosting, are the perfect way to end pizza night. Or you can eat 'em first. Don't worry, we won't tell",
+    "price": "6.11",
+    "points": 10,
+    "category": 9,
+    "created_at": "2022-10-26T19:12:49.925Z",
+    "updated_at": "2022-10-26T19:12:49.925Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 19,
+  "fields": {
+    "food_name": "Chocolate Chip Cookie",
+    "desc": "Pizza night just got a whole lot sweeter. Freshly baked and warm from the oven, our cookie is packed with semi-sweet chocolate chips that melt in your mouth.",
+    "price": "6.11",
+    "points": 10,
+    "category": 9,
+    "created_at": "2022-10-26T19:12:49.956Z",
+    "updated_at": "2022-10-26T19:12:49.956Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 20,
+  "fields": {
+    "food_name": "Triple Chocolate Brownie",
+    "desc": "Chocolate, chocolate, and more chocolate. Dig into this rich, decadent brownie made with semi-sweet chocolate chips, dark chocolate chips and cocoa. Did we mention there’s chocolate?",
+    "price": "6.11",
+    "points": 10,
+    "category": 9,
+    "created_at": "2022-10-26T19:12:49.988Z",
+    "updated_at": "2022-10-26T19:12:49.988Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 21,
+  "fields": {
+    "food_name": "Cinnamon Sticks",
+    "desc": "Our freshly-baked cinnamon sticks are a sweet finale to pizza night. Don't forget the icing dip for added deliciousness!",
+    "price": "6.11",
+    "points": 10,
+    "category": 9,
+    "created_at": "2022-10-26T19:12:50.015Z",
+    "updated_at": "2022-10-26T19:12:50.015Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 22,
+  "fields": {
+    "food_name": "Cream Cheese Frosting Dip",
+    "desc": "Add more signature cream cheese frosting to your order of Cinnabon® Mini Rolls. Can't say we blame you.",
+    "price": "0.99",
+    "points": 10,
+    "category": 9,
+    "created_at": "2022-10-26T19:12:50.043Z",
+    "updated_at": "2022-10-26T19:12:50.043Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 23,
+  "fields": {
+    "food_name": "Icing Dip",
+    "desc": "Sinfully sweet dip! We'd tell you it's just for desserts, but we don't want to cramp your creativity.",
+    "price": "0.99",
+    "points": 10,
+    "category": 9,
+    "created_at": "2022-10-26T19:12:50.065Z",
+    "updated_at": "2022-10-26T19:12:50.065Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 24,
+  "fields": {
+    "food_name": "Pepsi",
+    "desc": "The bold, refreshing, robust cola. All that's missing are the classic Pizza Hut cups.",
+    "price": "2.19",
+    "points": 5,
+    "category": 10,
+    "created_at": "2022-10-26T19:13:04.282Z",
+    "updated_at": "2022-10-26T19:13:04.282Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 25,
+  "fields": {
+    "food_name": "Diet Pepse",
+    "desc": "Light. Crisp. Refreshing. With zero sugar, zero calories, and zero carbs. You know what that means? More pizza.",
+    "price": "2.19",
+    "points": 5,
+    "category": 10,
+    "created_at": "2022-10-26T19:13:04.309Z",
+    "updated_at": "2022-10-26T19:13:04.309Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 26,
+  "fields": {
+    "food_name": "Pepsi Wild Cherry",
+    "desc": "The thrilling burst of unique cherry flavor and a sweet, crisp taste that gives you more to go wild for!",
+    "price": "2.19",
+    "points": 5,
+    "category": 10,
+    "created_at": "2022-10-26T19:13:04.336Z",
+    "updated_at": "2022-10-26T19:13:04.336Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 27,
+  "fields": {
+    "food_name": "Sprite",
+    "desc": "A crisp, refreshing & caffeine free Lemon-Lime flavor soda with real sugar and a splash of real juice.",
+    "price": "2.19",
+    "points": 5,
+    "category": 10,
+    "created_at": "2022-10-26T19:13:04.357Z",
+    "updated_at": "2022-10-26T19:13:04.357Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 28,
+  "fields": {
+    "food_name": "Sierra Mist",
+    "desc": "A crisp, refreshing & caffeine free Lemon-Lime flavor soda with real sugar and a splash of real juice.",
+    "price": "2.19",
+    "points": 5,
+    "category": 10,
+    "created_at": "2022-10-26T19:13:04.380Z",
+    "updated_at": "2022-10-26T19:13:04.380Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 29,
+  "fields": {
+    "food_name": "Coke",
+    "desc": "The bold, refreshing, robust cola. All that's missing are the classic Pizza Hut cups.",
+    "price": "2.19",
+    "points": 5,
+    "category": 10,
+    "created_at": "2022-10-26T19:13:04.400Z",
+    "updated_at": "2022-10-26T19:13:04.400Z",
+    "user": null
+  }
+},
+{
+  "model": "web_app.useritem",
+  "pk": 30,
+  "fields": {
+    "food_name": "Orange Crush",
+    "desc": "Crush Orange sends your taste buds into flavor overdrive with refreshingly juicy orange flavor that is 100% caffeine free.",
+    "price": "2.19",
+    "points": 5,
+    "category": 10,
+    "created_at": "2022-10-26T19:13:04.426Z",
+    "updated_at": "2022-10-26T19:13:04.426Z",
+    "user": null
+  }
+}
+]
