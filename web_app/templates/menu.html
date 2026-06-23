@@ -1,0 +1,268 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pizza Pizza | Menu</title>
+
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+    <!-- Page-only styles -->
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="site-nav">
+        <a href="/" class="logo">🍕 Pizza Pizza</a>
+
+        <div class="nav-links">
+            <a href="/menu">Menu</a>
+
+            {% if request.session.user_id %}
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/login">Login</a>
+            {% endif %}
+
+            <a href="/cart" class="cart-link">
+                Cart
+                {% if request.session.cart_item %}
+                    ({{ request.session.cart_item }})
+                {% else %}
+                    (0)
+                {% endif %}
+            </a>
+        </div>
+    </nav>
+
+    <main class="menu-page">
+
+        <!-- HERO -->
+        <section class="menu-hero">
+            <div>
+                <p class="eyebrow">Fresh Menu</p>
+                <h1>Choose your favorites.</h1>
+                <p>
+                    Pizza, pasta, appetizers, desserts, and drinks made fresh and ready to order.
+                </p>
+            </div>
+
+            <a href="/cart" class="hero-cart-btn">
+                View Cart
+                {% if request.session.cart_item %}
+                    ({{ request.session.cart_item }})
+                {% else %}
+                    (0)
+                {% endif %}
+            </a>
+        </section>
+
+        <section class="menu-wrapper">
+
+            <!-- APPETIZERS -->
+            <section class="menu-section">
+                <div class="section-heading">
+                    <h2>Appetizers</h2>
+                    <p>Start your order with something crispy and cheesy.</p>
+                </div>
+
+                <div class="menu-list">
+                    {% for item in apps %}
+                        <form class="menu-item" action="/cart/add/{{ item.id }}" method="post" novalidate>
+                            {% csrf_token %}
+
+                            <input type="hidden" name="cart_item" value="{{ item.id }}">
+
+                            <div class="menu-top">
+                                <span>🍟</span>
+                                <p>${{ item.price }}</p>
+                            </div>
+
+                            <div class="menu-item-content">
+                                <h3>{{ item.food_name }}</h3>
+                                <p class="description">{{ item.desc }}</p>
+                            </div>
+
+                            <button type="submit" class="menu-btn">
+                                Add To Cart
+                            </button>
+                        </form>
+                    {% empty %}
+                        <div class="empty-menu">
+                            <h3>No appetizers available.</h3>
+                            <p>Check back soon.</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- PIZZA -->
+            <section class="menu-section">
+                <div class="section-heading">
+                    <h2>Pizza</h2>
+                    <p>Classic favorites and fresh specialty pizzas.</p>
+                </div>
+
+                <div class="menu-list">
+                    {% for item in pizza %}
+                        <form class="menu-item featured-item" action="/cart/add/{{ item.id }}" method="post" novalidate>
+                            {% csrf_token %}
+
+                            <input type="hidden" name="cart_item" value="{{ item.id }}">
+
+                            <div class="menu-top">
+                                <span>🍕</span>
+                                <p>${{ item.price }}</p>
+                            </div>
+
+                            <div class="menu-item-content">
+                                <h3>{{ item.food_name }}</h3>
+                                <p class="description">{{ item.desc }}</p>
+                            </div>
+
+                            <button type="submit" class="menu-btn">
+                                Add To Cart
+                            </button>
+                        </form>
+                    {% empty %}
+                        <div class="empty-menu">
+                            <h3>No pizzas available.</h3>
+                            <p>Check back soon.</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- PASTA -->
+            <section class="menu-section">
+                <div class="section-heading">
+                    <h2>Pasta</h2>
+                    <p>Warm, filling, and made for comfort.</p>
+                </div>
+
+                <div class="menu-list">
+                    {% for item in pasta %}
+                        <form class="menu-item" action="/cart/add/{{ item.id }}" method="post" novalidate>
+                            {% csrf_token %}
+
+                            <input type="hidden" name="cart_item" value="{{ item.id }}">
+
+                            <div class="menu-top">
+                                <span>🍝</span>
+                                <p>${{ item.price }}</p>
+                            </div>
+
+                            <div class="menu-item-content">
+                                <h3>{{ item.food_name }}</h3>
+                                <p class="description">{{ item.desc }}</p>
+                            </div>
+
+                            <button type="submit" class="menu-btn">
+                                Add To Cart
+                            </button>
+                        </form>
+                    {% empty %}
+                        <div class="empty-menu">
+                            <h3>No pasta available.</h3>
+                            <p>Check back soon.</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- DESSERTS -->
+            <section class="menu-section">
+                <div class="section-heading">
+                    <h2>Desserts</h2>
+                    <p>Finish your meal with something sweet.</p>
+                </div>
+
+                <div class="menu-list">
+                    {% for item in desserts %}
+                        <form class="menu-item" action="/cart/add/{{ item.id }}" method="post" novalidate>
+                            {% csrf_token %}
+
+                            <input type="hidden" name="cart_item" value="{{ item.id }}">
+
+                            <div class="menu-top">
+                                <span>🍪</span>
+                                <p>${{ item.price }}</p>
+                            </div>
+
+                            <div class="menu-item-content">
+                                <h3>{{ item.food_name }}</h3>
+                                <p class="description">{{ item.desc }}</p>
+                            </div>
+
+                            <button type="submit" class="menu-btn">
+                                Add To Cart
+                            </button>
+                        </form>
+                    {% empty %}
+                        <div class="empty-menu">
+                            <h3>No desserts available.</h3>
+                            <p>Check back soon.</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- DRINKS -->
+            <section class="menu-section">
+                <div class="section-heading">
+                    <h2>Drinks</h2>
+                    <p>Cold drinks to complete your order.</p>
+                </div>
+
+                <div class="menu-list">
+                    {% for item in drinks %}
+                        <form class="menu-item" action="/cart/add/{{ item.id }}" method="post" novalidate>
+                            {% csrf_token %}
+
+                            <input type="hidden" name="cart_item" value="{{ item.id }}">
+
+                            <div class="menu-top">
+                                <span>🥤</span>
+                                <p>${{ item.price }}</p>
+                            </div>
+
+                            <div class="menu-item-content">
+                                <h3>{{ item.food_name }}</h3>
+                                <p class="description">{{ item.desc }}</p>
+                            </div>
+
+                            <button type="submit" class="menu-btn">
+                                Add To Cart
+                            </button>
+                        </form>
+                    {% empty %}
+                        <div class="empty-menu">
+                            <h3>No drinks available.</h3>
+                            <p>Check back soon.</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

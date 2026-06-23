@@ -1,0 +1,195 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pizza Pizza | Login</title>
+
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+    <!-- Page-only styles -->
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="site-nav">
+        <a href="/" class="logo">🍕 Pizza Pizza</a>
+
+        <div class="nav-links">
+            <a href="/menu">Menu</a>
+
+            {% if request.session.user_id %}
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/login">Login</a>
+            {% endif %}
+
+            <a href="/cart" class="cart-link">
+                Cart
+                {% if request.session.cart_item %}
+                    ({{ request.session.cart_item }})
+                {% else %}
+                    (0)
+                {% endif %}
+            </a>
+        </div>
+    </nav>
+
+    <!-- AUTH PAGE -->
+    <main class="auth-page">
+
+        <section class="auth-card">
+
+            <!-- FORM SIDE -->
+            <div class="auth-form-box">
+
+                {% if messages %}
+                    <div class="message-box">
+                        {% for message in messages %}
+                            <div 
+                                class="alert 
+                                {% if message.tags == 'error' %}
+                                    alert-danger
+                                {% else %}
+                                    alert-{{ message.tags }}
+                                {% endif %}"
+                            >
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <!-- LOGIN FORM -->
+                <form id="logForm" action="/login-post" method="post" novalidate>
+                    {% csrf_token %}
+
+                    <p class="auth-kicker">Welcome Back</p>
+                    <h1>Sign in to order faster.</h1>
+                    <p class="form-subtitle">
+                        Continue ordering your favorite pizzas and earn rewards.
+                    </p>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input 
+                            type="email" 
+                            name="email"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input 
+                            type="password" 
+                            name="password"
+                        >
+                    </div>
+
+                    <button type="submit" class="auth-submit-btn">
+                        Sign In
+                    </button>
+                </form>
+
+                <!-- REGISTER FORM -->
+                <form id="regForm" action="/register" method="post" novalidate class="hidden-form">
+                    {% csrf_token %}
+
+                    <p class="auth-kicker">New Here?</p>
+                    <h1>Create your account.</h1>
+                    <p class="form-subtitle">
+                        Get rewards, deals, and a faster checkout experience.
+                    </p>
+
+                    <div class="two-column-fields">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input 
+                                type="text" 
+                                name="first_name"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input 
+                                type="text" 
+                                name="last_name"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input 
+                            type="email" 
+                            name="email"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input 
+                            type="password" 
+                            name="password"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input 
+                            type="password" 
+                            name="confirm"
+                        >
+                    </div>
+
+                    <button type="submit" class="auth-submit-btn">
+                        Register
+                    </button>
+                </form>
+
+                <button 
+                    id="formControl" 
+                    type="button" 
+                    onclick="formSwitch()" 
+                    class="switch-form-btn"
+                >
+                    Need an account? Register
+                </button>
+
+            </div>
+
+            <!-- PROMO SIDE -->
+            <aside class="auth-promo-box">
+                <div class="promo-badge">15% OFF</div>
+
+                <h2>Pizza rewards start here.</h2>
+
+                <p>
+                    Sign up today and earn points every time you order.
+                </p>
+
+                <div class="promo-pizza">🍕</div>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

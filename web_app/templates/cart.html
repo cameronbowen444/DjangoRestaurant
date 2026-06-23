@@ -1,0 +1,191 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pizza Pizza | Cart</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+    <!-- Page-only styles -->
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="site-nav">
+        <a href="/" class="logo">🍕 Pizza Pizza</a>
+
+        <div class="nav-links">
+            <a href="/menu">Menu</a>
+
+            {% if request.session.user_id %}
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/login">Login</a>
+            {% endif %}
+
+            <a href="/cart" class="cart-link">
+                Cart
+                {% if cart_item %}
+                    ({{ cart_item }})
+                {% else %}
+                    (0)
+                {% endif %}
+            </a>
+        </div>
+    </nav>
+
+    <!-- CART PAGE -->
+    <main class="cart-page">
+
+        <section class="cart-hero">
+            <div>
+                <p class="eyebrow">Your Order</p>
+                <h1>Review your cart.</h1>
+                <p>Make changes, check your total, and continue to checkout.</p>
+            </div>
+
+            <a href="/menu" class="hero-menu-btn">Add More Items</a>
+        </section>
+
+        {% if order %}
+
+            <section class="cart-layout">
+
+                <!-- LEFT: CART ITEMS -->
+                <div class="cart-items-panel">
+
+                    <div class="panel-heading">
+                        <h2>Items</h2>
+                        <p>Your current order.</p>
+                    </div>
+
+                    <div class="cart-items-list">
+                        {% for item in order %}
+                            <article class="cart-row">
+
+                                <div class="cart-food-icon">
+                                    🍕
+                                </div>
+
+                                <div class="cart-item-info">
+                                    <h3>{{ item.name }}</h3>
+                                    <p>${{ item.price }} each</p>
+                                </div>
+
+                                <div class="quantity-controls">
+                                    <a href="/cart/decrease/{{ item.id }}" class="quantity-btn minus-btn">
+                                        -
+                                    </a>
+
+                                    <span>{{ item.quantity }}</span>
+
+                                    <a href="/cart/increase/{{ item.id }}" class="quantity-btn plus-btn">
+                                        +
+                                    </a>
+                                </div>
+
+                                <div class="cart-item-total">
+                                    <small>Total</small>
+                                    <strong>${{ item.item_total }}</strong>
+                                </div>
+
+                            </article>
+                        {% endfor %}
+                    </div>
+
+                </div>
+
+                <!-- RIGHT: SUMMARY -->
+                <aside class="summary-panel">
+
+                    <div class="panel-heading">
+                        <h2>Summary</h2>
+                        <p>Almost ready to order.</p>
+                    </div>
+
+                    <div class="summary-box">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <strong>${{ subtotal }}</strong>
+                        </div>
+                        {% if discount > 0 %}
+                            <div class="summary-row discount-row">
+                                <span>Signed-in Discount</span>
+                                <strong>- ${{ discount }}</strong>
+                            </div>
+
+                            <div class="discount-badge">
+                                You saved 15% for being signed in.
+                            </div>
+                        {% else %}
+                            <div class="login-discount-box">
+                                <strong>Want 15% off?</strong>
+                                <span>Sign in or create an account before checkout.</span>
+                                <a href="/login">Sign In</a>
+                            </div>
+                        {% endif %}
+
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <strong>${{ tax }}</strong>
+                        </div>
+
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <strong>${{ total }}</strong>
+                        </div>
+                    </div>
+
+                    <div class="cart-actions">
+                        <a href="/checkout" class="checkout-btn">
+                            Continue To Checkout
+                        </a>
+
+                        <a href="/menu" class="add-more-btn">
+                            Add More Items
+                        </a>
+                    </div>
+
+                </aside>
+
+            </section>
+
+        {% else %}
+
+            <section class="empty-cart-box">
+                <div class="empty-icon">🛒</div>
+
+                <h2>Your cart is empty.</h2>
+
+                <p>
+                    Add some pizza, pasta, appetizers, desserts, or drinks to get started.
+                </p>
+
+                <a href="/menu" class="empty-menu-btn">
+                    View Menu
+                </a>
+            </section>
+
+        {% endif %}
+
+    </main>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
